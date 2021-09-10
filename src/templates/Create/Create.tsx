@@ -20,18 +20,22 @@ function Create() {
           <div className={styles.titleField}>
             <TextInput label="Notepad title" placeholder="My notepad title..." />
           </div>
-          <div className={styles.noteFields}>
+          <div className={styles.fieldsHolder}>
             <NoteTitle text="My Notes" />
             <TextInput placeholder="My notepad title..." />
             <Textarea placeholder="Placeholder" />
+          </div>
+          <div className={styles.buttonHolder}>
             <Button label="Add" type="green" />
           </div>
         </div>
 
         <div className={styles.actions}>
-          <Button label="View State" type="default" />
-          <Button label="Save" type="blue" />
-          <Button label="Delete" type="red" />
+          <div className={styles.actionsHolder}>
+            <Button label="View State" type="default" />
+            <Button label="Save" type="blue" />
+            <Button label="Delete" type="red" />
+          </div>
         </div>
       </div>
     </Layout>

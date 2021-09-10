@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .fields {
@@ -8,5 +9,9 @@
 }
 
 .actions {
+  padding-top: 23px;
   flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
