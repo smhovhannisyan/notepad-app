@@ -4,7 +4,11 @@ const Create = dynamic(() => import('templates/Create'));
 
 function Notepad() {
   return (
-    <Create />
+    <Create notes={[{
+      noteTitle: 'Hello',
+      noteContent: 'Test Content',
+    }]}
+    />
   );
 }
 

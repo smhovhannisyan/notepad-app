@@ -1,27 +1,29 @@
-import { useState, useCallback } from 'react';
+import { ChangeEvent } from 'react';
 import classnames from 'classnames';
+
+import ErrorMessage from 'components/ErrorMessage';
 
 import styles from './textarea.module.css';
 
 type TextareaPropsType = {
+  name: string;
   value?: string;
   placeholder?: string;
   label?: string;
   className?: string;
+  handleOnChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+  errorMessage?: string | null;
 }
 
 function Textarea({
+  name,
   value: _value = '',
   placeholder,
   label,
   className = '',
+  handleOnChange,
+  errorMessage,
 }: TextareaPropsType) {
-  const [value, setValue] = useState<string>(_value);
-
-  const handleOnChange = useCallback((e) => {
-    setValue(e.target.value);
-  }, [setValue]);
-
   const holderClassNames = classnames(className, { [styles.textareaHolder]: true });
 
   return (
@@ -30,10 +32,12 @@ function Textarea({
         {label && <span className={styles.labelText}>{label}</span>}
         <textarea
           onChange={handleOnChange}
+          name={name}
           className={styles.textarea}
-          value={value}
+          value={_value}
           placeholder={placeholder}
         />
+        {errorMessage && <ErrorMessage message={errorMessage} />}
       </label>
     </div>
   );

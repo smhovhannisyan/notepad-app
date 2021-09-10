@@ -13,6 +13,7 @@ module.exports = {
     'next/core-web-vitals',
   ],
   rules: {
+    'react/no-array-index-key': 0,
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
     'react/require-default-props': 0,

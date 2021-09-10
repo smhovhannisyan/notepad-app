@@ -1,9 +1,10 @@
+import { FormEvent } from 'react';
 import classNames from 'classnames';
 
 import styles from './button.module.css';
 
 type ButtonPropsType = {
-  handleOnClick?: () => void;
+  handleOnClick?: (e: FormEvent<HTMLButtonElement>) => void;
   type?: 'default' | 'green' | 'blue' | 'red';
   label: string;
 };
