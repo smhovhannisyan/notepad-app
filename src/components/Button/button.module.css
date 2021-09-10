@@ -1,0 +1,32 @@
+.button {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.default {
+  border-color: var(--border-color);
+  color: var(--text-color);
+  background: #fff;
+}
+
+.green {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+
+.blue {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+
+.red {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}

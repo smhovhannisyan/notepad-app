@@ -10,24 +10,27 @@
   font-size: 12px;
 }
 
-.input {
+.textarea {
   color: var(--text-color);
   border-color: var(--border-color);
   border-style: solid;
   border-radius: 5px;
   border-width: 1px;
   padding: 10px;
+  height: 150px;
+  resize: none;
+  font-size: 12px;
 }
 
-.input::placeholder {
+.textarea::placeholder {
   color: #aaa;
   opacity: 1;
 }
 
-.input:-ms-input-placeholder {
+.textarea:-ms-input-placeholder {
   color: #aaa;
 }
 
-.input::-ms-input-placeholder {
+.textarea::-ms-input-placeholder {
   color: #aaa;
 }
